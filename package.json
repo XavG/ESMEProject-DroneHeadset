@@ -1,0 +1,27 @@
+{
+  "name": "epocdrone",
+  "version": "1.0.0",
+  "description": "projet scolaire manipulation de drone a l aide de casque eeg",
+  "main": "serverSide.js",
+  "dependencies": {
+    "ar-drone": "^0.3.3",
+    "bindings": "^1.2.1",
+    "dronestream": "^1.1.1",
+    "express": "^4.13.4",
+    "faye": "^1.1.2",
+    "fs": "^0.0.2",
+    "http": "^0.0.0",
+    "nan": "^2.2.1",
+    "node-gyp": "^3.3.1",
+    "path": "^0.12.7",
+    "socket.io": "^1.4.5",
+    "underscore": "^1.8.3",
+    "node-epocjs": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node serverSide.js"
+  },
+  "author": "XavG",
+  "license": "UNLICENSED"
+}

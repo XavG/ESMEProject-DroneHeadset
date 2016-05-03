@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr-en">
+	<head>
+		<meta charset="UTF-8">
+		<title> CasqueDrone </title>
+		<script type="text/javascript" src="components/jquery/jquery.js"></script>
+		<link rel="stylesheet" type="text/css" href="components/style.css">
+		<link rel="stylesheet" type="text/css" href="components/bootstrap/css/bootstrap.min.css">
+		<link rel="icon" type="image/png" href="Img/logo.png" >
+	</head>
+
+	<body background="Img/texture.jpg">
+		<div id="blocPage">
+			<header class="col-md-12">
+				<div class="headset col-md-5">
+					<h2>Headset</h2>
+					<div class="row col-md-6">
+						<strong>Signal: </strong><span id="h_signal" class="datainput"></span><br/>
+						<strong>Battery: </strong><span id="h_battery" class="datainput"></span><br/><br/>
+						<strong>Connected: </strong><span id="h_isConnected" class="datainput"></span><br/>
+					</div>
+					<br/>
+					<input type="submit" id="h_connexionButton" value="Connexion"/>
+				</div>
+				<img class="logo col-md-2" src="Img/logo.png" alt="logo GLG"/>
+				<div class="drone col-md-5">
+					<h2>Drone</h2>
+					<div class="row col-md-12">
+						<strong>Connected:</strong> <span id="d_isConnected" class="datainput"></span><br />
+						<strong>Battery:</strong> <span id="d_battery" class="datainput"></span><br />
+					</div>
+				</div>
+			</header>
+			
+			<section>
+				<br/>
+				<div class="col-md-12" style="text-align: center">
+					<br/>
+					<input type="button" id="emergencyButton" value="EMERGENCY!" />
+					<div id="emergency" class="datainput"></div>
+					<br/>
+				</div>
+				
+				<span class="stream col-md-12" id="middlePage">
+					<div id="animateArea">	
+						<p><strong> Flips:</strong></p>
+						<input type="image" class="animate" data-index="1" src="Img/flipfront.png">
+						<input type="image" class="animate" data-index="2" src="Img/flipback.png"> 
+						<input type="image" class="animate" data-index="3" src="Img/flipright.png"> 
+						<input type="image" class="animate" data-index="4" src="Img/flipleft.png">
+					</div>
+					
+					<div id="firstStream">
+						<strong>Video 1:</strong>
+						<div id="firstDroneStream"></div>
+					</div>
+
+					<div id="takeAddButton">
+						<br/>
+						<input type="button" id="s_takePicture" value="Photo">
+						<input type="button" id="s_addStream" value="+">	
+					</div>
+					
+					<div  id="secondStream">
+					</div>
+				</span>
+			</section>
+			
+			<footer>
+				<div id="navdataInformation1">
+					<br/>
+					<br/>
+					<strong>Vitesse:</strong><span id="d_speed" class="datainput"></span><br />
+					<strong>Altitude du drone:</strong><span id="d_height" class="datainput"></span><br />
+					<strong>Direction: </strong><span id="d_direction" class="datainput"></span><br />
+				</div>
+				<div id="directionKey">
+					<div id="controlbutton">
+						<div>
+							<input type="image" id="ktakeoff" src="Img/takeoff.png">
+							<input type="image" id="kcounterClockwise" src="Img/counterClockwise.png">
+							<input type="image" id="kup" src="Img/up.png">
+							<input type="image" id="kclockwise" src="Img/clockwise.png"> 
+						</div>
+						<input type="image" id="kland" src="Img/land.png">
+						<input type="image" id="kleft" src="Img/left.png">
+						<input type="image" id="kdown" src="Img/down.png"> 
+						<input type="image" id="kright" src="Img/right.png"> 
+						<p> Keyboard : 1 = clockwise / 2 = counterClockwise</p>
+						<p>          : 4 = takeoff   / 5 = land            </p>
+					</div>
+				</div>
+				<div id="navdataInformation2">
+				</div>
+			</footer>
+
+			<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+			<script src="/dronestream/nodecopter-client.js"></script>
+			<script src="/faye/client.js"></script>
+			<script src="leap.js"></script>
+			<script src="clientSideLeap.js"></script>
+			<script src="clientSideHeadset.js"></script>
+		</div>
+	</body>
+</html>
