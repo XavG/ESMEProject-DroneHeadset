@@ -1,0 +1,20 @@
+{
+  "name": "node-epocjs",
+  "version": "1.0.0",
+  "description": "Node.js Addon for the Emotiv EPOC+/Insight headset",
+  "author": "Xavier G <xav.guerin@hotmail.fr>",
+  "git repository": "https://github.com/XavG/node-epocjs",
+  "keywords": [
+    "node.js",
+    "nodejs",
+    "emotiv",
+    "epoc",
+    "sdk",
+    "community"
+  ],
+  "main": "test.js",
+  "gypfile": true,
+  "dependencies": {
+    "node-gyp": "^3.3.1"
+  }
+}
