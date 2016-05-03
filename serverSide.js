@@ -6,7 +6,7 @@
 **addon : C++ library for headset Emotiv EPOC+
 */
 
-const addon = require('./public/App/build/Release/addon');
+const addon = require('./epocjs/build/Release/addon');
 
 var express = require('express');
 var faye = require ('faye');
