@@ -165,6 +165,13 @@ $(document).keydown( function( ev ) {
 		channel = '/Fly';
 		break;
 		
+		case 99: // Pad 3
+		$('#kddown').attr('src','Img/addown.png');
+		data.action = 'down';
+		data.speed = 0.8;
+		channel = '/Fly';
+		break;
+		
 		case 100: // Pad 4
 		$('#ktakeoff').attr('src','Img/atakeoff.png');
 		data.action = 'takeoff'
@@ -175,6 +182,12 @@ $(document).keydown( function( ev ) {
 		$('#kland').attr('src','Img/aland.png');
 		data.action = 'land'
 		channel = '/UpDown';
+		break;
+		
+		case 102: // Pad 6
+		$('#kuup').attr('src','Img/aup.png');
+		data.action = 'up'
+		channel = '/Fly';
 		break;
 	}
 	fayehClient.publish(channel, data);
@@ -218,6 +231,11 @@ $(document).keyup(function(ev){
 			var notAnOtherKey = true;
 			break;
 			
+			case 99: // Pad 3
+			$('#kddown').attr('src','Img/ddown.png');
+			var notAnOtherKey = true;
+			break;
+			
 			case 100: // Pad 4
 			$('#ktakeoff').attr('src','Img/takeoff.png');
 			var notAnOtherKey = true;
@@ -227,6 +245,13 @@ $(document).keyup(function(ev){
 			$('#kland').attr('src','Img/land.png');
 			var notAnOtherKey = true;
 			break;
+			
+			case 102: // Pad 6
+			$('#kuup').attr('src','Img/uup.png');
+			var notAnOtherKey = true;
+			break;
+			
+			
 		}
 		if (notAnOtherKey){
 			fayehClient.publish('/UpDown', data);
