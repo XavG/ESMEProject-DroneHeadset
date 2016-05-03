@@ -104,6 +104,10 @@ $('#s_addStream').click(function(){
 	}
 });
 
+$('#trim').click(function(){
+	fayehClient.publish('/trim','');
+});
+
 /* ALL key event with the HTML page */
 $(document).keydown( function( ev ) {
 	console.log(ev.keyCode);

@@ -107,6 +107,12 @@ client.subscribe( '/Animate', function( data ){
 	
 });
 
+client.subscribe('/trim',function(){
+	if (drone.ftrim()){
+		console.log('drone : flat trim');
+	}
+});
+
 client.subscribe('/headConnect', function(){
 	if (addon.connection()){
 			console.log('Headest EPOC+ connected ! Start receiving... ');
